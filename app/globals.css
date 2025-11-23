@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Editorial Tech Color Palette */
+  --story-paper: #f8f9fa;
+  --story-ink: #1a1a1a;
+  --signal-red: #cc0000;
+  --system-gray: #e9ecef;
+  
+  --background: var(--story-paper);
+  --foreground: var(--story-ink);
+}
+
+/* CSS Variables for use in animations */
+:root {
+  --signal-red: #cc0000;
+  --system-gray: #e9ecef;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Classes */
+.font-story {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.font-interface {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+.font-data {
+  font-family: "SFMono-Regular", "SF Mono", Menlo, "Courier New", Courier, monospace;
+}
+
+/* Sharp Borders - Minimal Border Radius */
+.sharp {
+  border-radius: 0;
+}
+
+.sharp-sm {
+  border-radius: 2px;
+}
+
+.sharp-md {
+  border-radius: 4px;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(248, 249, 250, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Prism Wave Grid Background */
+.prism-grid {
+  background-image: 
+    linear-gradient(var(--system-gray) 1px, transparent 1px),
+    linear-gradient(90deg, var(--system-gray) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Snappy Transitions */
+.snappy {
+  transition: all 150ms ease-out;
+}
+
+/* Video Wall Marquee Animations */
+@keyframes marquee-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marquee-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-marquee-up {
+  animation: marquee-up 30s linear infinite;
+}
+
+.animate-marquee-down {
+  animation: marquee-down 35s linear infinite;
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(204, 0, 0, 0.15);
+}
+
+/* Signal Red glow effect */
+.glow-red {
+  box-shadow: 0 0 20px rgba(204, 0, 0, 0.3);
+}
+
+.glow-red:hover {
+  box-shadow: 0 0 30px rgba(204, 0, 0, 0.5);
+}
+
+/* Prism Wave Grid Background */
+.prism-wave {
+  background: 
+    linear-gradient(90deg, transparent 0%, var(--signal-red) 50%, transparent 100%),
+    repeating-linear-gradient(
+      0deg,
+      var(--system-gray) 0px,
+      var(--system-gray) 1px,
+      transparent 1px,
+      transparent 20px
+    );
+  background-size: 100% 4px, 100% 20px;
+  height: 200px;
+  position: relative;
+}
+
+.prism-wave::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--signal-red) 10%,
+    var(--signal-red) 90%,
+    transparent 100%
+  );
+  opacity: 0.6;
+  animation: wave-pulse 3s ease-in-out infinite;
+}
+
+@keyframes wave-pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
