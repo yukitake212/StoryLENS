@@ -1,7 +1,8 @@
 # AIノベル・トレーラー｜要件定義・詳細アーキテクチャ設計（v1.0）
 
-> 最終更新: 2025-10-25 (JST)  
-> 対象: MVP〜v1.0 の実装チーム向け
+> 最終更新: 2025-01-XX (JST)  
+> 対象: MVP〜v1.0 の実装チーム向け  
+> **実装状況**: MVP基盤実装完了（詳細は `implementation-status.md` を参照）
 
 ---
 
@@ -305,4 +306,37 @@ create policy select_works_public on works for select
 
 ---
 
-**以上** — 実装に向け、画面定義/コンポーネント設計、OpenAPIスキーマを別紙で展開予定。
+---
+
+## 21. 実装状況・関連ドキュメント
+
+### 実装完了項目
+
+MVP基盤の実装が完了しました。詳細は以下のドキュメントを参照してください：
+
+- **実装状況**: `docs/implementation-status.md`
+- **API仕様**: `docs/api-specification.md`
+- **データベーススキーマ**: `docs/database-schema.md`
+- **セットアップガイド**: `SETUP.md` (プロジェクトルート)
+
+### 実装済み機能
+
+- ✅ Next.js 14 (App Router) + TypeScript セットアップ
+- ✅ Supabase データベーススキーマ作成
+- ✅ RLS (Row Level Security) ポリシー実装
+- ✅ 認証システム（NextAuth.js）
+- ✅ フロントエンドページ（LP、ダッシュボード、作品登録、案件管理、チャット、ギャラリー）
+- ✅ FastAPI バックエンド基盤
+- ✅ AI監督機能 API（OpenAI連携準備完了）
+
+### 次の実装ステップ
+
+1. 実際のSupabaseクエリ実装
+2. ファイルアップロード機能
+3. リアルタイムチャット（Supabase Realtime）
+4. 決済連携（Stripe）
+5. 通知機能
+
+---
+
+**以上** — 実装状況の詳細は `implementation-status.md` を参照してください。
