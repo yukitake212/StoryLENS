@@ -204,3 +204,10 @@ projects (1) ──< (1) gallery_items
 
 SupabaseのSQL Editorで実行するか、Supabase CLIを使用して適用してください。
 
+
+
+
+
+
+
+

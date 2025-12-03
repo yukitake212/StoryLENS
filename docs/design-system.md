@@ -299,3 +299,10 @@ SF的でありながら、未来的すぎず、むしろ現代的な洗練され
 - [Editorial Design Principles](https://www.interaction-design.org/literature/topics/editorial-design)
 - [Minimalist Architecture](https://en.wikipedia.org/wiki/Minimalism)
 
+
+
+
+
+
+
+
