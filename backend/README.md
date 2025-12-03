@@ -36,3 +36,10 @@ uvicorn main:app --reload
 
 APIドキュメントは `http://localhost:8000/docs` で確認できます。
 
+
+
+
+
+
+
+

@@ -191,3 +191,10 @@ CREATE POLICY "Anyone can view published gallery items"
   ON public.gallery_items FOR SELECT
   USING (is_published = true);
 
+
+
+
+
+
+
+

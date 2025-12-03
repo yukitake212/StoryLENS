@@ -8,3 +8,10 @@ openai==1.10.0
 httpx==0.26.0
 python-multipart==0.0.6
 
+
+
+
+
+
+
+
