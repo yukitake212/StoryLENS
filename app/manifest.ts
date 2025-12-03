@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'StoryLENS - 文字列に、世界を与える。',
+    name: 'StoryLENS - テキストに宿る物語の魂を映像化しよう',
     short_name: 'StoryLENS',
     description: '小説の予告編・ショート映像をAIクリエイターに依頼できるプラットフォーム',
     start_url: '/',
@@ -24,7 +24,7 @@ export default function manifest(): MetadataRoute.Manifest {
         src: '/icon.svg',
         sizes: '512x512',
         type: 'image/svg+xml',
-        purpose: 'any maskable',
+        purpose: 'maskable',
       },
     ],
   }
