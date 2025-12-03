@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "StoryLENS - 文字列に、世界を与える。",
+  title: "StoryLENS - テキストに宿る物語の魂を映像化しよう",
   description: "小説の予告編・ショート映像をAIクリエイターに依頼できるプラットフォーム",
   icons: {
     icon: [

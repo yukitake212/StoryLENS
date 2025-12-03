@@ -162,6 +162,11 @@ body {
   }
 }
 
+/* Radial gradient utility */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
